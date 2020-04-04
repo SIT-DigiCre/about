@@ -16,7 +16,7 @@
 <!--- Start Home Section -->
 <div id="home">
   <!--- Navgation -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background: rgba(0, 120, 100, 0.3);">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background: rgba(0, 0, 0, 0.8);">
     <!-- <a class="navbar-brand" href="#"><img src="img/icon.jpg" alt="icon"></a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
       <span class="navbar-toggler-icon"></span>
@@ -49,10 +49,10 @@
   <!--- Slider -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/oX9M1nhSimA?loop=1&playlist=oX9M1nhSimA&controls=0&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/GMzgvtX4j2o?loop=1&playlist=GMzgvtX4j2o&controls=0&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/rqOH0YQHfwg?loop=1&playlist=rqOH0YQHfwg&controls=0&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/Eh54HvDiDWw?loop=1&playlist=Eh54HvDiDWw&controls=0&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="swiper-slide youtube"><iframe src="https://www.youtube.com/embed/oX9M1nhSimA?loop=1&playlist=oX9M1nhSimA&controls=0&rel=0&showinfo=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="swiper-slide youtube"><iframe  src="https://www.youtube.com/embed/GMzgvtX4j2o?loop=1&playlist=GMzgvtX4j2o&controls=0&rel=0&showinfo=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="swiper-slide youtube"><iframe  src="https://www.youtube.com/embed/rqOH0YQHfwg?loop=1&playlist=rqOH0YQHfwg&controls=0&rel=0&showinfo=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="swiper-slide youtube"><iframe  src="https://www.youtube.com/embed/Eh54HvDiDWw?loop=1&playlist=Eh54HvDiDWw&controls=0&rel=0&showinfo=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
@@ -190,8 +190,10 @@
     <div class="container-fluid">
       <div class="row justify-content-center text-center">
         <div class="col-md-6 social">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <strong>Contact Info</strong>
+          <p>sitdigicrecircle@gmail.com</p>
+          <a href="https://twitter.com/sitdigicre"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/channel/UCKz8KYao5CXcHlBgq7QfbUg"><i class="fab fa-youtube"></i></a>
         </div>
         <hr class="socket">
         &copy;2016 Digicre Shibaura Institute of Tecnology
@@ -228,7 +230,7 @@
       clickable: true,
     },
     autoplay: {
-      delay: 7000,
+      delay: 8000,
       stopOnLastSlide: false,
       disableOnInteraction: true
     },
@@ -260,10 +262,19 @@ jQuery('.floating').click(function () {
 
 <script>
 $(function(){
-  $('h1').delay(1200).fadeIn("slow", function () {
+  $('h1').delay(2000).fadeIn("slow", function () {
   $(this).delay(3000).fadeOut("slow");
   });
 });
+</script>
+
+<script>
+  $(window).on('load resize', function(){
+    // navbarの高さを取得する
+    var height = $('nav').height();
+    // bodyのpaddingにnavbarの高さを設定する
+    $('#home').css('padding-top',height+10); 
+  });
 </script>
 </body>
 </html>
