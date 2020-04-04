@@ -70,6 +70,9 @@ a:hover {
   @include _arrow;
   @include _arrow-top;
 }
+.youtube {
+  @include _youtube;
+}
 .caption {
   width: 100%;
   min-width: 100%;
@@ -78,7 +81,7 @@ a:hover {
   z-index: 2;
   color: white;
   & h1 {
-    font-size: 7rem;
+    font-size: 7vw;
     font-weight: 700;
     text-shadow: .1rem .1rem .8rem black;
     display: none;

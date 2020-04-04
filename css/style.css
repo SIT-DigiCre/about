@@ -381,12 +381,12 @@ hr.socket {
   color: #00aced;
 }
 
-.fa-google-plus-g {
-  color: #dd4b39;
+.fa-youtube {
+  color: #bb0000;
 }
 
 .fa-twitter:hover,
-.fa-google-plus-g:hover {
+.fa-youtube:hover {
   color: #d5d5d5;
 }
 
@@ -532,6 +532,22 @@ a:hover {
   /* 矢印の太さと色の指定 */
 }
 
+.youtube {
+  /*YouTubeレスポンシブ*/
+  position: relative;
+  max-width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 の高さなので 56.25% (= 9 ÷ 16) */
+}
+
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .caption {
   width: 100%;
   min-width: 100%;
@@ -542,7 +558,7 @@ a:hover {
 }
 
 .caption h1 {
-  font-size: 7rem;
+  font-size: 7vw;
   font-weight: 700;
   text-shadow: .1rem .1rem .8rem black;
   display: none;
