@@ -1,0 +1,24 @@
+/*--- Navigation ---*/
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar-brand img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.navbar-nav li {
+  padding-right: 1rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff !important;
+  &.active,
+  &:hover {
+    color: #1ebba3 !important;
+  }
+}
+.collapsing {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
